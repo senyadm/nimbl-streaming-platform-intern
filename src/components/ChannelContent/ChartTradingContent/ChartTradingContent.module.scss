@@ -1,0 +1,35 @@
+.chart__header {
+    display: flex;
+    align-items: center;
+    font-size: 13px;
+    gap: 10px;
+}
+.chart__range_list {
+    background: #141c25;
+    display: flex;
+}
+.chart__range_item {
+    padding: 8px  10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+
+    &.active {
+        background: linear-gradient(
+            273.52deg,
+            rgba(0, 234, 242, 0.2) -54.44%,
+            rgba(234, 0, 213, 0.2) 110.67%
+        );
+        backdrop-filter: blur(5.48288px);
+        border: 1px solid #7077e5;
+    }
+
+    &:hover {
+        background: linear-gradient(
+            273.52deg,
+            rgba(0, 234, 242, 0.075) -54.44%,
+            rgba(234, 0, 215, 0.055) 110.67%
+        );
+    }
+}

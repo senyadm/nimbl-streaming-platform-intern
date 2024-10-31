@@ -1,0 +1,61 @@
+.chart__wrap {
+    background: rgba(33, 35, 52, 0.45);
+    box-shadow: inset 2.19315px 2.19315px 14.8038px rgba(255, 255, 255, 0.04);
+    backdrop-filter: blur(28.4358px);
+    padding: 15px;
+}
+
+.chart__header {
+    display: flex;
+    align-items: center;
+    font-size: 13px;
+    gap: 10px;
+}
+.chart__range_list {
+    background: #141c25;
+    display: flex;
+}
+.chart__range_item {
+    padding: 8px  10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+
+    &.active {
+        background: linear-gradient(
+            273.52deg,
+            rgba(0, 234, 242, 0.2) -54.44%,
+            rgba(234, 0, 213, 0.2) 110.67%
+        );
+        backdrop-filter: blur(5.48288px);
+        border: 1px solid #7077e5;
+    }
+
+    &:hover {
+        background: linear-gradient(
+            273.52deg,
+            rgba(0, 234, 242, 0.075) -54.44%,
+            rgba(234, 0, 215, 0.055) 110.67%
+        );
+    }
+}
+
+.chart__footer {
+    display: flex;
+    gap: 15px;
+}
+
+.chart__stats_item {
+    flex: 1 0 180px;
+    background: #141C25;
+    border: 1px solid rgba(51, 120, 254, 0.6);
+    font-size: 13px;
+    padding: 7px 10px;
+    display: flex;
+    justify-content: space-between;
+
+    .key {
+        color: #8A8A8A;
+    }
+}

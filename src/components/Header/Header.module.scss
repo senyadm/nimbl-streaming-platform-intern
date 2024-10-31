@@ -1,0 +1,142 @@
+.header {
+    margin: 1px;
+    width: calc(100vw - 2px);
+    height: 55px;
+    font-size: 14px;
+    font-weight: 600;
+    background: linear-gradient(#111a41, #111a41) 50% 50% / calc(100% - 2px)
+            calc(100% - 2px) no-repeat,
+        linear-gradient(95deg, #00eaf2 0%, #ea00d5 100%);
+    box-sizing: border-box;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 5px;
+
+    &__logo {
+        cursor: pointer;
+        margin-top: 5px;
+    }
+
+    // .navigation {
+    //     width: 5vw;
+    //     height: 100%;
+    //     img {
+    //         background-color: #1515;
+    //     }
+    //     img:nth-child(2) {
+    //         transform: rotateY(180deg);
+    //     }
+    // }
+
+    &__search {
+        position: relative;
+
+        &::before {
+            content: '';
+            position: absolute;
+            background: url('../../assets/icons/search.svg') no-repeat center
+                center/cover;
+            left: 20px;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            width: 15px;
+            height: 15px;
+        }
+
+        input {
+            width: 30vw;
+            height: 35px;
+            padding: 10px 10px 10px 35px;
+
+            background: linear-gradient(#0a0e20, #0a0e20) 50% 50% /
+                    calc(100% - 2px) calc(100% - 2px) no-repeat,
+                linear-gradient(95deg, #00eaf2 0%, #ea00d5 100%);
+            border: none;
+            color: #fff;
+
+            &::placeholder {
+                color: #fff;
+                font-size: 16px;
+            }
+
+            &::before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 25px;
+                height: 25px;
+
+                background-size: cover;
+            }
+        }
+    }
+
+    &__right {
+        display: flex;
+        flex-direction: row;
+        gap: 50px;
+
+        &_dropdowns {
+            display: flex;
+            gap: 25px;
+            list-style: none;
+            color: #fff;
+
+            &_item {
+                display: flex;
+                align-items: center;
+                gap: 8px;
+                @keyframes span {
+                    from {
+                        -webkit-mask-position: 150%;
+                    }
+            
+                    to {
+                        -webkit-mask-position: -50%;
+                    }
+                }
+                &:hover {
+                    cursor: pointer;
+                    font-size: 14px;
+                    font-size: 600;
+                    background: linear-gradient(
+                        270deg,
+                        #ea00d5 -6.27%,
+                        #3d5eff 60.51%,
+                        #00eaf2 69.84%
+                    );
+
+                    -webkit-background-clip: text;
+                    -webkit-text-fill-color: transparent;
+
+                    -webkit-mask-image: linear-gradient(
+                        -75deg,
+                        rgba(0, 0, 0, 0.6) 30%,
+                        #000 50%,
+                        rgba(0, 0, 0, 0.6) 70%
+                    );
+                    -webkit-mask-size: 200%;
+                    animation: span 2s infinite;
+                }
+
+                img {
+                    margin-top: 3px;
+                    width: 15px;
+                }
+            }
+        }
+
+        &_icons {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+
+            &:hover {
+                cursor: pointer;
+            }
+        }
+    }
+}

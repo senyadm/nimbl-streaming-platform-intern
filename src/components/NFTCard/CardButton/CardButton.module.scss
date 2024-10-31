@@ -1,0 +1,30 @@
+.button_wrap {
+    height: 50px;
+    clip-path: polygon(15px 0, 100% 0, 100% calc(100% - 15px), calc(100% - 15px) 100%, 0 100%, 0 15px);
+    padding: 5px;
+    background: linear-gradient(106.95deg, rgba(1, 167, 255, 0.1) 0.4%, rgba(255, 0, 245, 0.1) 103.58%);
+    box-shadow: inset 2.33178px 3.39168px 6.99534px rgba(255, 255, 255, 0.11);
+    backdrop-filter: blur(19.7141px);
+
+    .button_content {
+        cursor: pointer;
+        font-family: "Octosquares-Bold";
+        clip-path: polygon(15px 0, 100% 0, 100% calc(100% - 15px), calc(100% - 15px) calc(100% ), 0 calc(100% ), 0 15px);
+        height: 100%;
+        background-clip: padding-box;
+        font-size: 17px;
+        text-align: center;
+        padding: 10px ;
+        background: linear-gradient(106.95deg,
+                rgba(1, 167, 255, 0.8) 0.4%,
+                rgba(255, 0, 245, 0.8) 103.58%);
+
+        opacity: 0.85;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        &:hover {
+            opacity: 1;
+        }
+    }
+}

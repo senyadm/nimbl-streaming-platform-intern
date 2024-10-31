@@ -1,0 +1,278 @@
+.player {
+    height: 100%;
+    position: relative;
+    color: #fff;
+    -webkit-box-shadow: inset 0px 0px 50px 120px rgba(0, 0, 0, 0.64);
+    box-shadow: inset 0px 0px 50px 12px rgba(0, 0, 0, 0.64);
+    position: relative;
+
+    &_controller_bottom {
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        bottom: 0;
+        width: 100%;
+        &_likes {
+            display: flex;
+            gap: 15px;
+            width: 270px;
+            margin-bottom: -5px;
+
+            background-image: radial-gradient(
+                    circle at 100% 100%,
+                    transparent 0px,
+                    #0cbdcc 0px,
+                    #0cbdcc 1px,
+                    transparent 1px
+                ),
+                linear-gradient(to right, #0cbdcc, #cc15d9),
+                radial-gradient(
+                    circle at 0% 100%,
+                    transparent 0px,
+                    #cc15d9 0px,
+                    #cc15d9 1px,
+                    transparent 1px
+                ),
+                linear-gradient(to bottom, #cc15d9, #cc15d9),
+                radial-gradient(
+                    circle at 0% 0%,
+                    transparent 0px,
+                    #cc15d9 0px,
+                    #cc15d9 1px,
+                    transparent 1px
+                ),
+                linear-gradient(to left, #cc15d9, #5f74d2),
+                radial-gradient(
+                    circle at 100% 0%,
+                    transparent 0px,
+                    #5f74d2 0px,
+                    #5f74d2 1px,
+                    transparent 1px
+                ),
+                linear-gradient(to top, #5f74d2, #0cbdcc);
+            background-size: 1px 1px, calc(100% - 2px) 1px, 1px 1px,
+                1px calc(100% - 2px);
+            background-position: top left, top center, top right, center right,
+                bottom right, bottom center, bottom left, center left;
+            background-repeat: no-repeat;
+
+            span {
+                display: flex;
+                align-items: center;
+                gap: 5px;
+                font-size: 13px;
+                color: #fff;
+                padding: 5px 5px;
+                width: 300px;
+
+                border-right: 1px solid #cc15d9;
+
+                img:hover {
+                    cursor: pointer;
+                }
+            }
+        }
+
+        &_volume_row {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            padding: 5px;
+
+            img {
+                width: 20px;
+                height: 15px;
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+.bottom_opacity {
+    background-color: #000;
+    opacity: 0.5;
+    width: 100%;
+    height: 45px;
+    bottom: 0;
+    position: absolute;
+
+    &_content {
+        padding: 0 10px;
+    }
+}
+
+.progress {
+    width: 100%;
+    height: 8px;
+    cursor: pointer;
+
+    &__filled {
+        width: 60%;
+        height: 8px;
+        background: linear-gradient(273.27deg, #00eaf2 0.47%, #ea00d5 99.64%);
+        flex: 0;
+        flex-basis: 0%;
+    }
+}
+
+.pause_center {
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    position: absolute;
+    bottom: 50%;
+    right: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 5;
+
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(13.7px);
+    -webkit-backdrop-filter: blur(13.7px);
+
+    img {
+        margin: 3px 0 0 5px;
+    }
+}
+
+.bottom_opacity_content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.bottom_right {
+    display: flex;
+    gap: 15px;
+    img {
+        cursor: pointer;
+        width: 20px;
+        height: 15px;
+        margin-top: 5px;
+    }
+}
+
+.player_controller_bottom_volume_row {
+    display: flex;
+    align-items: center;
+}
+.volume_progress {
+    display: flex;
+
+    .progress {
+        width: 100px;
+        height: 8px;
+        background-color: gray;
+        cursor: pointer;
+
+        &__filled {
+            width: 60px;
+            height: 8px;
+            background: #fff;
+        }
+    }
+}
+
+.volume_progress {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.player_top {
+    width: 100%;
+    padding: 15px;
+    position: absolute;
+    top: 0;
+
+    display: flex;
+    justify-content: space-between;
+
+    &_title {
+        h3 {
+            width: 50%;
+            font-size: 15px;
+            margin-bottom: 15px;
+        }
+
+        div {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+
+            span {
+                display: flex;
+                align-items: center;
+                gap: 10px;
+
+                img {
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+
+    &_channel {
+        display: flex;
+        gap: 15px;
+        position: absolute;
+        right: 15px;
+        &_content {
+            h4 {
+                font-size: 20px;
+                text-align: right;
+            }
+            p {
+                font-weight: 400;
+                font-size: 24px;
+                color: #a9a9b7;
+                font-size: 15px;
+                text-align: right;
+            }
+        }
+    }
+}
+
+.settings_menu {
+    position: absolute;
+    right: 0;
+    bottom: 45px;
+    padding: 25px 20px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(7.5px);
+
+    border-radius: 10px;
+
+    span {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 25px;
+
+        p {
+            font-weight: 400;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        h6 {
+            margin-top: -5px;
+            font-size: 16px;
+            font-weight: 400;
+            cursor: pointer;
+        }
+
+        h6::after {
+            content: '  >';
+            font-size: 25px;
+            align-items: center;
+        }
+    }
+}

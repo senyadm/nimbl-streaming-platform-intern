@@ -1,0 +1,139 @@
+@import url('../fonts/stylesheet.css');
+
+:root {
+    --main-color-gray: #0d1429;
+    --main-color-pink: #ea00d5;
+    --main-color-purple: #3d5eff;
+    --main-color-blue: #00eaf2;
+
+    --main-background: linear-gradient(
+        90deg,
+        var(--main-color-gray),
+        var(--main-color-pink)
+    );
+
+    --scrollbar-gradient: linear-gradient(
+        var(--main-color-blue),
+        var(--main-color-pink)
+    );
+}
+
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: 'TT Octosquares';
+}
+
+.layout {
+    background: url('../assets/background.jpg') no-repeat center center / cover;
+    width: 100vw;
+    height: 100vh;   
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.content {
+    flex-grow: 1;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.content {
+    flex-grow: 1;
+    overflow: hidden;
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+
+    height: 5px;
+}
+::-webkit-scrollbar-thumb {
+    background: var(--scrollbar-gradient);
+    border-radius: 6px;
+}
+
+#logo-container svg{
+    width: 250px;
+    height: auto;
+}
+
+.login_form{
+    max-width: 500px;
+    width: 100%;
+    box-sizing: border-box;
+    .input_wrapper{
+        display: flex;
+        width: 90%;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 2rem;
+        margin-left: auto;
+        margin-right: auto;
+        box-sizing: border-box;
+        label{
+            font-size: 20px;
+            color: #FFFFFF;
+        }
+        input{
+            padding: 5px 15px;
+            font-size: 20px;
+            background: transparent;
+            border: none;
+            color: #FFFFFF;
+        }
+    }
+
+    button {
+        width: 100%;
+        color: white;
+        cursor: pointer;
+        padding: 20px 100px;
+        font-size: 26px;
+        font-weight: bold;
+        background: rgb(0, 234, 242);
+        background: linear-gradient(
+                        90deg,
+                        rgba(0, 234, 242, 0.7) 0%,
+                        rgba(61, 94, 255, 0.7) 27%,
+                        rgba(234, 0, 213, 0.7) 100%
+        );
+        border-radius: 8px;
+    }
+}
+.btn_meta{
+    max-width: 500px !important;
+    width: 100%;
+    position: relative;
+    border: 1px solid transparent;
+    border-radius: 5px;
+    background: #21273E;
+    background-clip: padding-box;
+    color: white;
+    cursor: pointer;
+    padding: 20px 100px;
+    font-size: 24px;
+    font-weight: bold;
+    &:before {
+        position: absolute;
+        top: -2px;
+        bottom: -2px;
+        left: -2px;
+        right: -2px;
+        background: linear-gradient(181.96deg,#0CBDCC -3.28%,#5F74D2 48.13%,#CC15D9 102.25%);
+        content: "";
+        z-index: -2;
+        border-radius: 5px;
+    }
+}
+
+.login_wrapper{
+    width: 100vw;
+    min-height: 100vh;
+    background: url('../assets/background.jpg') no-repeat center center / cover;
+}
+

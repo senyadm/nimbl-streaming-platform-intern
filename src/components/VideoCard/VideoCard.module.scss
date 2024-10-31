@@ -1,0 +1,148 @@
+.card {
+    display: flex;
+    flex-direction: column;
+    font-size: 15px;
+    position: relative;
+    overflow: hidden;
+    width: 23%;
+    height: auto;
+
+    color: #fff;
+    transition: 0.5s all;
+
+    &:hover {
+        -webkit-box-shadow: 0px 0px 10px 8px rgba(68, 120, 233, 0.5);
+        -moz-box-shadow: 0px 0px 10px 8px rgba(68, 120, 233, 0.5);
+        box-shadow: 0px 0px 10px 8px rgba(68, 120, 233, 0.5);
+        transform: scale(1.1, 1.1);
+        background-color: black;
+    }
+
+    &__preview {
+        position: relative;
+
+        img {
+            width: 100%;
+            height: 160px;
+            object-fit: cover;
+        }
+        video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        &__bottom {
+            position: absolute;
+            bottom: -18%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+            height: 50px;
+            padding: 0 15px;
+
+            background: rgba(0, 0, 0, 0.7);
+            backdrop-filter: blur(5px);
+            -webkit-backdrop-filter: blur(5px);
+
+            @media screen and (min-width: 1900px) {
+                bottom: -10%;
+            }
+
+            img {
+                height: 35px;
+                width: 35px;
+            }
+
+            &_title {
+                display: flex;
+                align-items: center;
+                gap: 8px;
+                font-weight: 400;
+                font-size: 15px;
+                text-decoration: none;
+                color: #fff;
+            }
+
+            &_info {
+                span {
+                    font-size: 15px;
+                    font-weight: 600;
+                    background: -webkit-linear-gradient(
+                        to top right,
+                        var(--main-color-blue) 24%,
+                        var(--main-color-purple) 43%,
+                        var(--main-color-pink) 77%
+                    );
+                    background: -moz-linear-gradient(
+                        to top right,
+                        var(--main-color-blue) 24%,
+                        var(--main-color-purple) 43%,
+                        var(--main-color-pink) 77%
+                    );
+                    background: linear-gradient(
+                        to top right,
+                        var(--main-color-blue) 24%,
+                        var(--main-color-purple) 43%,
+                        var(--main-color-pink) 77%
+                    );
+                    background-clip: text;
+                    -webkit-background-clip: text;
+                    -webkit-text-fill-color: transparent;
+                }
+            }
+        }
+    }
+
+    &__info {
+        margin-top: 8%;
+        h3 {
+            font-weight: 400;
+            font-size: 15px;
+        }
+        padding: 5px 10px;
+
+        &_bottom {
+            display: flex;
+            gap: 25px;
+            margin-top: 15px;
+            font-size: 13px;
+
+            div {
+                display: flex;
+                align-items: center;
+                gap: 10px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1420px) {
+    .card {
+        width: 31%;
+
+        &__info {
+            h3 {
+                font-size: 12px;
+            }
+            padding: 8px 12px;
+
+            &_bottom {
+                font-size: 10px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1100px) {
+    .card {
+        width: 30%;
+    }
+}
+
+@media screen and (max-width: 815px) {
+    .card {
+        width: 29%;
+    }
+}

@@ -1,0 +1,108 @@
+.filter {
+    background: rgba(33, 35, 52, 0.45);
+    box-shadow: inset 3.13144px 3.13144px 21.1372px rgba(255, 255, 255, 0.04);
+    backdrop-filter: blur(40.6015px);
+}
+
+.filter_item {
+    padding: 17px 15px;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: all 0.2s;
+    cursor: pointer;
+
+    .arrow_icon {
+        transition: transform 0.2s;
+    }
+
+    &:hover,
+    &.active {
+        background: #0c111e;
+    }
+    &.active {
+        .arrow_icon {
+            transform: rotate(180deg);
+        }
+    }
+
+    &.filter_price {
+        gap: 5px;
+        font-size: 15px;
+        padding: 10px 15px;
+        background: #0c111e;
+        .price_type {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            align-self: stretch;
+            gap: 7px;
+            border: 1px solid #3b4760;
+            border-radius: 4px;
+            padding: 0 10px;
+        }
+        input {
+            width: 70px;
+            background: transparent;
+            padding: 10px;
+            text-align: center;
+            outline: none;
+            border: 1px solid #3b4760;
+            border-radius: 4px;
+            color: white;
+        }
+    }
+}
+
+.switch {
+    width: 40px;
+    height: 20px;
+    cursor: pointer;
+    border-radius: 999px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    position: relative;
+    transition: all 0.2s;
+    background: rgba(82, 79, 79, 0.33);
+    box-shadow: inset 3.50914px 3.50914px 23.6867px rgba(255, 255, 255, 0.07);
+    backdrop-filter: blur(45.4986px);
+
+    &::before {
+        content: '';
+        width: 100%;
+        padding-top: 100%;
+        position: absolute;
+        background: #ea00d5;
+        transition: transform 0.2s;
+        border: radius 50%;
+        left: 0;
+        transform: translateX(-100%);
+    }
+
+    &:active {
+        transform: scale(0.85);
+    }
+
+    .switch__circle {
+        position: absolute;
+        transition: all 0.2s;
+        left: 4%;
+        height: 80%;
+        aspect-ratio: 1/1;
+        border-radius: 50%;
+        background: white;
+        opacity: 0.8;
+    }
+    &.active {
+        .switch__circle {
+            left: 96%;
+            transform: translateX(-100%);
+            opacity: 1;
+        }
+        &::before {
+            transform: translateX(0);
+        }
+    }
+}

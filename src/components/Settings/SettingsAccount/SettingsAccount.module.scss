@@ -1,0 +1,115 @@
+@import '../_SettingsGlobal.module.scss';
+
+.form_section {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 35px;
+    border-bottom: 1px solid #7077e5;
+    margin-bottom: 35px;
+
+    form.left_col {
+        padding: 8px;
+        width: 460px;
+        display: flex;
+        flex-direction: column;
+
+        label {
+            font-size: 13px;
+            line-height: 19px;
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+
+        input,
+        textarea {
+            padding: 9px 13px;
+            border: 1px solid rgba(59, 101, 255, 0.5);
+            background-color: transparent;
+            border-radius: 5px;
+            color: white;
+            font-size: 13px;
+            line-height: 19px;
+            margin-bottom: 17px;
+            resize: vertical;
+
+            &::placeholder {
+                color: white;
+            }
+        }
+
+        .button_list {
+            margin-top: 35px;
+
+            button {
+                border-radius: 5px;
+                padding: 7px 18px;
+                font-size: 13px;
+                color: white;
+                cursor: pointer;
+                border: none;
+                background: transparent;
+                margin-right: 18px;
+                transition: all 0.2s ease;
+
+                &:hover {
+                    transform: translateY(-3px);
+                }
+            }
+
+            button[type='submit'] {
+                background: linear-gradient(
+                    90.24deg,
+                    rgba(1, 234, 242, 0.5) 0.21%,
+                    rgba(59, 101, 255, 0.5) 57.08%,
+                    rgba(215, 11, 218, 0.5) 102.91%
+                );
+            }
+            button[type='reset'] {
+                box-shadow: 0 0 0 1px rgba(215, 11, 218, 0.5);
+            }
+        }
+    }
+
+    .right_col {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        padding-top: 9px;
+
+        .avatar {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 18px;
+
+            img {
+                aspect-ratio: 1 / 1;
+                margin-bottom: 5px;
+            }
+
+            .profile_link {
+                font-size: 13px;
+                font-weight: 600;
+            }
+        }
+
+        .profile_settings__list {
+            list-style-type: none;
+            color: #6bb8ff;
+            font-size: 13px;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            align-items: flex-end;
+
+            li {
+                cursor: pointer;
+                &:hover {
+                    color: #c1ddf8;
+                }
+            }
+        }
+    }
+}
+
